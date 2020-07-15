@@ -1,32 +1,29 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
+import "./header-styles.scss"
 
-const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
+const Header = ({ siteTitle, menuItems }) => (
+  <header>
+    <div className="header">
+      <h2 style={{ margin: 0 }}>
         <Link
           to="/"
           style={{
-            color: `white`,
+            color: `black`,
             textDecoration: `none`,
           }}
         >
           {siteTitle}
         </Link>
-      </h1>
+      </h2>
+      <ul className="headerMenu">
+        {menuItems.map(item => (
+          <li key={item.name}>
+            <a href={item.link}>{item.name}</a>
+          </li>
+        ))}
+      </ul>
     </div>
   </header>
 )
@@ -37,6 +34,14 @@ Header.propTypes = {
 
 Header.defaultProps = {
   siteTitle: ``,
+  menuItems: [
+    { link: "about", name: "About" },
+    { link: "action", name: "Action" },
+    { link: "contact", name: "Contact" },
+    { link: "donate", name: "Donate" },
+    { link: "events", name: "Events" },
+    { link: "join", name: "Join" },
+  ],
 }
 
 export default Header
