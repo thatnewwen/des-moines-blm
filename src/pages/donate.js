@@ -7,9 +7,8 @@ import SEO from "../components/seo"
 const Donate = () => (
   <Layout>
     <SEO title="Page two" />
-    <h1>Hi from the second page</h1>
-    <p>Welcome to page 2</p>
-    <Link to="/">Go back to the homepage</Link>
+    <h1>Donate</h1>
+    <p>Coming soon</p>
   </Layout>
 )
 
