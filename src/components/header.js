@@ -35,12 +35,12 @@ Header.propTypes = {
 Header.defaultProps = {
   siteTitle: ``,
   menuItems: [
-    { link: "about", name: "About" },
-    { link: "action", name: "Action" },
-    { link: "contact", name: "Contact" },
-    { link: "donate", name: "Donate" },
-    { link: "events", name: "Events" },
-    { link: "join", name: "Join" },
+    { link: "/about", name: "About" },
+    { link: "/action", name: "Action" },
+    { link: "/contact", name: "Contact" },
+    { link: "/donate", name: "Donate" },
+    { link: "/events", name: "Events" },
+    { link: "/join", name: "Join" },
   ],
 }
 
