@@ -2,6 +2,7 @@ import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
 import "./header-styles.scss"
+import Navigation from "./navigation"
 
 const Header = ({ siteTitle, menuItems }) => (
   <header>
@@ -17,6 +18,7 @@ const Header = ({ siteTitle, menuItems }) => (
           {siteTitle}
         </Link>
       </h2>
+      <Navigation />
       <ul className="headerMenu">
         {menuItems.map(item => (
           <li key={item.name}>

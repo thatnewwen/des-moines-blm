@@ -29,7 +29,7 @@ const Layout = ({ children }) => {
       <Header siteTitle={data.site.siteMetadata.title} />
       <div>
         <main>{children}</main>
-        <footer>Des Moines BLM</footer>
+        <footer></footer>
       </div>
     </>
   )

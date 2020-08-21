@@ -19,6 +19,10 @@ $maxHeight: 600px;
   justify-content: space-between;
 }
 
+.menu-button {
+  visibility: hidden;
+}
+
 @media (max-width: $maxWidth) {
   .header {
     height: 54px;
@@ -30,7 +34,8 @@ $maxHeight: 600px;
   }
 }
 // headerMenu
-.headerMenu {
+.headerMenu,
+.mobileMenu {
   list-style: none;
   margin: 0;
   padding-left: 10px;
@@ -42,13 +47,23 @@ $maxHeight: 600px;
   margin-bottom: 0;
 }
 
-.headerMenu li a {
+.mobileMenu li {
+  margin: 20px 0;
+}
+
+.headerMenu li a,
+.mobileMenu li a {
   display: block;
   text-decoration: none;
   text-transform: uppercase;
   color: black;
   font-weight: bold;
 }
+
+.mobileMenu li a {
+  font-size: 24px;
+}
+
 @media (max-width: $maxWidth) {
   .headerMenu li a {
     padding: 3px 10px 5px 0;
@@ -64,6 +79,23 @@ $maxHeight: 600px;
 @media (min-width: $minWidth) {
   .headerMenu li a {
     padding: 15px 15px;
-    font-size: 16px;
+  }
+}
+@media (max-width: 500px) {
+  .headerMenu {
+    display: none;
+  }
+  .mobileMenu {
+    flex-direction: column;
+  }
+
+  .menu-button {
+    visibility: visible;
+    background: none;
+    border: none;
+    font-size: 18px;
+    text-transform: uppercase;
+    position: absolute;
+    right: 20px;
   }
 }
